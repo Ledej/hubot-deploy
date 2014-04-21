@@ -18,6 +18,11 @@ You need to set the following environmental variables.
 
 * **HUBOT\_GITHUB\_TOKEN**: A [GitHub token](https://github.com/settings/applications#personal-access-tokens) with [repo\_deployment](https://developer.github.com/v3/oauth/#scopes). The owner of this token creates [Deployments][1].
 
+Optional environmental variables
+
+* **HUBOT\_GITHUB\_DEFAULT\_BRANCH**: The default branch used (if none is specified defaults to 'master')
+* **HUBOT\_GITHUB\_DEFAULT\_ENVIRONMENT**: The default environement used (if none is specified defaults to 'production')
+
 ## See Also
 
 * [heaven](https://github.com/atmos/heaven) - Listens for Deployment events from GitHub and executes the deployment for you.

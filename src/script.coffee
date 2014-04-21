@@ -34,9 +34,9 @@ module.exports = (robot) ->
     task  = msg.match[1]
     force = msg.match[2] == '!'
     name  = msg.match[3]
-    ref   = (msg.match[4]||'master')
-    env   = (msg.match[5]||'production')
-    hosts = (msg.match[6]||'')
+    ref   = (msg.match[4] || process.env.HUBOT_GITHUB_DEFAULT_BRANCH || 'master')
+    env   = (msg.match[5] || process.env.HUBOT_GITHUB_DEFAULT_ENVIRONMENT || 'production')
+    hosts = (msg.match[6] || '')
 
     deployment = new Deployment(name, ref, task, env, force, hosts)
 
