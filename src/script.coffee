@@ -80,7 +80,7 @@ module.exports = (robot) ->
       return
 
     deployment.room = msg.message.user.room
-    deployment.user = msg.envelope.user.name
+    deployment.user = msg.envelope.user.mention_name || msg.envelope.user.name
 
     deployment.adapter = robot.adapterName
 
