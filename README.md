@@ -21,6 +21,8 @@ You need to set the following environmental variables.
 Optional environmental variables
 
 * **HUBOT\_GITHUB\_DEPLOYMENT\_AUTO\_MERGE**: Enable/Disable the `auto-merge` github process, pass `'0'` or `'1'`. (Default to `'1'`)
+* **HUBOT\_GITHUB\_DEFAULT\_BRANCH**: The default branch used (if none is specified defaults to 'master')
+* **HUBOT\_GITHUB\_DEFAULT\_ENVIRONMENT**: The default environement used (if none is specified defaults to 'production')
 
 ## See Also
 

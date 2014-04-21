@@ -65,8 +65,8 @@ module.exports = (robot) ->
     task  = msg.match[1].replace(DeployPrefix, "deploy")
     force = msg.match[2] == '!'
     name  = msg.match[3]
-    ref   = (msg.match[4]||'master')
-    env   = (msg.match[5]||'production')
+    ref   = (msg.match[4] || process.env.HUBOT_GITHUB_DEFAULT_BRANCH || 'master')
+    env   = (msg.match[5] || process.env.HUBOT_GITHUB_DEFAULT_ENVIRONMENT || 'production')
     hosts = (msg.match[6]||'')
     auto_merge = process.env.HUBOT_GITHUB_DEPLOYMENT_AUTO_MERGE != '0'
 
